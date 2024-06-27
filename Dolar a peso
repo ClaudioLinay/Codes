@@ -1,0 +1,15 @@
+dolar_peso = 950
+
+def precios():
+    precios_dolares = []
+    for i in range(10):
+        precio = float(input("Ingrese el precio del producto " + str(i + 1) + " en dólares: "))
+        precios_dolares.append(precio)
+    
+    precios_pesos = [precio * dolar_peso for precio in precios_dolares]
+    
+    print("Precios en pesos chilenos:")
+    for i in range(10):
+        print("Producto " + str(i + 1) + ": $" + str(round(precios_pesos[i], 2)) + " pesos")
+
+precios()
