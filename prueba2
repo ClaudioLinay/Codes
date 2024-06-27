@@ -1,0 +1,21 @@
+def nota():
+    notas = []
+    while True:
+        nota = float(input("Ingrese una nota (0 para finalizar): "))
+        if nota == 0:
+            break
+        notas.append(nota)
+    
+    if notas:
+        cantidad_notas = len(notas)
+        promedio_notas = sum(notas) / cantidad_notas
+        nota_minima = min(notas)
+        nota_maxima = max(notas)
+        
+        print("Cantidad de notas: " + str(cantidad_notas))
+        print("Promedio de notas: " + str(round(promedio_notas, 2)))
+        print("Nota mínima: " + str(nota_minima))
+        print("Nota máxima: " + str(nota_maxima))
+    else:
+        print("No se ingresaron notas.")
+nota()
