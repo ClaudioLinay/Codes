@@ -1,0 +1,24 @@
+def pais_capital():
+    paises_capitales = {}
+    for _ in range(5):
+        pais = input("Ingrese el nombre del país: ")
+        capital = input("Ingrese la capital de " + pais + ": ")
+        paises_capitales[pais] = capital
+    return paises_capitales
+
+def obtener_informacion_turista():
+    nombre_turista = input("Ingrese el nombre del turista: ")
+    pais_procedencia = input("Ingrese el país de procedencia del turista: ")
+    return nombre_turista, pais_procedencia
+
+def main():
+    paises_capitales = pais_capital()
+    nombre_turista, pais_procedencia = obtener_informacion_turista()
+    
+    if pais_procedencia in paises_capitales:
+        capital = paises_capitales[pais_procedencia]
+        print("El turista " + nombre_turista + " viene del país " + pais_procedencia + " y su capital es " + capital + ".")
+    else:
+        print("El país " + pais_procedencia + " no está en la lista.")
+
+main()
